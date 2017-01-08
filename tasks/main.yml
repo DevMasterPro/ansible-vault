@@ -75,7 +75,7 @@
   when: service_type == "sysv" and ansible_distribution == 'Debian'
 
 - name: upstart script
-  template: src=vault_upstart.service.j2 dest=dest=/etc/init/vault.conf owner=root group=root mode=755
+  template: src=vault_upstart.service.j2 dest=/etc/init/vault.conf owner=root group=root mode=755
   when: service_type == "upstart"
 
 - name: systemd script
