@@ -76,7 +76,7 @@
 
 - name: upstart script
   template: src=vault_upstart.service.j2 dest=/lib/systemd/system/vault.service owner=root group=root mode=644
-  when: service_type == "upstart
+  when: service_type == "upstart"
 
 - name: systemd script
   template: src=vault_systemd.service.j2 dest=/lib/systemd/system/vault.service owner=root group=root mode=644
